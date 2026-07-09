@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Result Identification</title>
+    </head>
+    <body>
+        <input type="number" id="num">
+        <p id="result"></p>
+        <button onClick="caculate()">Calculate</button>
+        <script>
+            function caculate (){
+                var num=document.getElementById("num").value;
+                console.log(num);
+                var result;
+                if (num>=85){result="Excellent";
+                }
+                else if (num>=70)
+                {result="Very Good";}
+                else if (num>=60)
+                { result="Good";}
+                else if (num>=50)
+                { result="Fair";}
+                else if (num>=30)
+                { result="Needs Improvement";}
+                else if (num>=0)
+                { result="Poor";}
+                else 
+                { result="Invalid";}
+
+                document.getElementById("result").innerHTML= result;
+            }
+        </script>
+    </body>
+</html>
