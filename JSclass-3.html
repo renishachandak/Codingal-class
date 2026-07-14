@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Flowers</title>
+    </head>
+    <body>
+        <h1>Flowers!!!!!</h1>
+        <p id="flo"></p>
+        <script>
+            var flowers = ["Lily","SunFlower","Jasmine","Rose","Daisy"];
+            var text = "";
+            var i;
+            for (i = 0; i < flowers.length; i++) {
+            text += flowers[i] + "<br>";   
+            }
+            document.getElementById("flo").innerHTML = text; 
+        </script>
+    </body>
+</html>
