@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title> Form </title>
+    </head>
+    <body>
+         <h2> Login </h2>
+         <form onsubmit="loginUser(event)">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter Your Email Id">
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter Your Password">
+
+            <button onclick="Submit" class="login-bnt">Login</button>
+         </form>
+         <script>
+            function loginUser(event){
+
+             let email = document.getElementById("email").value;
+             let password = document.getElementById("passwoard").value;
+
+             if (email ==="" || password === "") {
+                message.style.color = "red";
+                message.innerHTML = "Please fill all the fields";
+             }
+             else if (email === "admin@gmail.com" && password === "12345") {
+                message.style.color = "green";
+                message.innerHTML = "Login successful"
+             }
+             else {
+    message.style.color = "red";
+    message.innerHTML = "Invalid email or password";
+}
+
+   function togglePassword() {
+      let password = document.getElementById("password");
+      let toggleText = document.querySelector(".password-box span");
+
+      if (password.type === "password") {
+        password.type = "text";
+        toggleText.innerHTML = "Hide";
+    }  
+      else {
+        password.type = "password";
+        toggleText.innerHTML = "Show";
+    }
+}
+            }
+         </script>
+    </body>
+</html>
