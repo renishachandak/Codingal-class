@@ -1,0 +1,51 @@
+<html>
+<head>
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <h1>My Score Profile</h1>
+
+    <button onclick="showProfile()">Show Profile</button>
+
+    <div>Name: <span id="name"></span></div>
+    <div>Score: <span id="score"></span></div>
+    <div>Top Score: <span id="top-score"></span></div>
+    <div>Rank: <span id="rank"></span></div>
+    
+
+    <script>
+
+        function showProfile() {
+
+            let name = "Renisha";
+            let myScore = 80;
+            let highScore = 100;
+            let bonus = null;
+            let team;
+
+            let isTopScore = myScore == highScore;
+
+            let rank;
+            if (myScore >= 90) {
+                rank = "Gold";
+            }
+            else if (myScore >= 70) {
+                rank = "Silver";
+            }
+            else {
+                rank = "Bronze";
+            }
+
+            document.getElementById("name").innerText = name;
+            document.getElementById("score").innerText = myScore;
+            document.getElementById("top-score").innerText = highScore;
+            document.getElementById("rank").innerText = rank;
+           
+
+    </script>
+
+</body>
+</html>
