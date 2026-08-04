@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Eval Function</title>
+    </head>
+    <body>
+        <button onclick="myFunction()">Click!!</button>
+
+        <p id="hi"></p>
+
+        <script>
+            function myFunction() {
+                var x = 30;
+                var y = 50;
+
+                var a = eval("x + y") + "<br>"
+                var b = eval("x * y") + "<br>"
+                var c = eval("x - y") + "<br>"
+
+                var res = a + b + c;
+
+                document.getElementById("hi").innerHTML = res;
+            }
+        </script>
+
+        <h1>Array</h1>
+        <button onclick="assending()">Assending Order</button>
+        <button onclick="dessending()">Dessending Order</button>
+        <p id="result"></p>
+        <script>
+            var points = [2, 10, 4, 8, 6];
+
+            document.getElementById("result").innerHTML = points;
+
+            function assending() {
+                points.sort(function(a,b) {
+                    return a - b;
+                });
+     document.getElementById("result").innerHTML = points;
+
+            }
+             function dessending() {
+                points.sort(function(a,b) {
+                    return b - a;
+                });
+                 document.getElementById("result").innerHTML = points;
+
+            }
+        </script>
+
+         <h1>Multiplication</h1>
+
+    <p id="hi"></p>
+    
+    <script>
+        var numbers = [47, 38, 58, 67, 23];
+
+        function myFunction(num) {
+            return num * 15;
+        }
+
+        var newarray = numbers.map(myFunction);
+
+        document.getElementById("hi").innerHTML = newarray;
+
+    </script>
+    </body>
+</html>
