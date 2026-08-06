@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>JavaScript In Detail</title>
+    </head>
+    <body>
+        <h1>String</h1>
+
+        <p id="hi"></p>
+
+        <script>
+            var x = 10
+            var y = 30
+
+            document.getElementById("hi").innerHTML = String(x) + String(y)
+        </script>
+
+          <h1>Alert</h1>
+
+        <p id="hi"></p>
+
+        <script>
+            try {
+                alert("Welcome");
+            }
+            catch(err) {
+                document.getElementById("hi").innerHTML = err.message;
+            }
+        </script>
+
+         <h1>Arrow</h1>
+
+        <p id="hi"></p>
+
+        <script>
+            const add = (a,b) => a + b;
+
+            document.getElementById("hi").innerHTML = add(6,7);
+        </script>
+    </body>
+</html>
