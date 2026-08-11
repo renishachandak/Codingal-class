@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>JSON and Asynchronous</title>
+    </head>
+    <body>
+        <h1>Delivery Tracker</h1>
+        <button onclick="Save()">Save</button>
+        <button onclick="Track()">Track</button>
+
+        <div>Item Name:<span id="item"></span></div>
+        <div>Item Price:<span id="price"></span></div>
+        <div>Status:<span id="status"></span></div>
+        <div>Result:<span id="result"></span></div>
+        <script>
+
+            let order = {
+                item: "Waffel",
+                price: "10"
+            };
+
+            function Save() {
+                let jsonText = JSON.stringify(order)
+                let loadedorder = JSON.parse(jsonText)
+
+                document.getElementById("item").innerHTML = loadedorder.item;
+                document.getElementById("price").innerHTML = "$" + loadedorder.price;
+            }
+
+            function  delay(ms){
+                return new Promise(function(resolve) {
+            setTimeout(resolve,ms)
+                })} 
+        
+           async function Track() {
+            document.getElementById("status").innerHTML = "Order Received!!";
+            setTimeout(function() {
+                document.getElementById("status").innerHTML = "Kitchen Is Preparing Your Order!!";
+            }, 1000);
+
+            await delay(2000);
+            document.getElementById("status").innerHTML = "Order Is Out For Delivery!!!";
+
+            await delay(3000);
+            document.getElementById("result").innerHTML = "Your Order Has Arrived At Your Location!!!!"
+        }
+        </script>
+    </body>
+</html>
